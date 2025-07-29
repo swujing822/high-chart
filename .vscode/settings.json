@@ -1,0 +1,35 @@
+{
+  // 设置浅色主题
+  // "workbench.colorTheme": "Solarized Light",
+
+  // 字体配置
+  "editor.fontSize": 16,
+  "editor.lineHeight": 26,
+  "editor.tabSize": 4,
+
+  "files.autoSave": "afterDelay",
+  "files.autoSaveDelay": 1000,
+
+  // 资源管理器缩进
+  "workbench.tree.indent": 30,
+  "workbench.tree.renderIndentGuides": "always",
+
+  // 终端字体更清晰
+  "terminal.integrated.fontSize": 15,
+
+  // "editor.guides.indentation": false,
+  "editor.renderWhitespace": "none",
+  "editor.cursorBlinking": "smooth",
+
+
+
+
+
+  // "python.defaultInterpreterPath": "/home/codespace/.python/current/bin/python",
+  // "python.analysis.extraPaths": [
+  //   "/usr/local/python/3.12.1/lib/python3.12/site-packages"
+  // ],
+  
+  //   "python.languageServer": "Pylance",
+  // "python.defaultInterpreterPath": ".venv/bin/python"
+}

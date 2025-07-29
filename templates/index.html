@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+  <meta charset="UTF-8">
+  <title>CSV 数据浏览</title>
+  <script src="https://code.highcharts.com/highcharts.js"></script>
+  <style>
+
+  </style>
+  <link rel="stylesheet" href="./static/main.css" />
+
+</head>
+
+<body>
+  <link href="https://unpkg.com/tabulator-tables@5.5.0/dist/css/tabulator.min.css" rel="stylesheet" />
+  <script src="https://unpkg.com/tabulator-tables@5.5.0/dist/js/tabulator.min.js"></script>
+  <script src="./static/table_init.js"></script> <!-- 引入外部js -->
+  <script src="./static/chart_utils.js"></script> <!-- 引入外部js -->
+
+
+  <div style="display: flex;align-items: flex-start;">
+    <div>
+      <select id="csvSelect"></select>
+      <input id="myInput" style="width: 50px;" />
+
+      <span class="btn" onclick="update_data(0, -1)">减少</span>
+      <span class="btn" onclick="update_data(0, 1)">增加</span>
+      <span class="btn" onclick="update_data(-1, -1)">后退</span>
+      <span class="btn" onclick="update_data(1, 1)">前移</span>
+      <span id="start"></span>
+      <span style="padding: 5px;"> | </span>
+      <span id="end"></span>
+
+
+    </div>
+
+    <!-- <span class="btn" onclick="all_cancle_rev()">全选/反选</span> -->
+
+    <div id="filter"></div>
+
+  </div>
+  <div id="container"></div>
+  <div id="container2"></div>
+  <div id="example-table"></div>
+
+  <script>
+    // 初始化文件列表
+
+    var gFileName = '';
+    var gStart = 0;
+    var gEnd = 0;
+
+    let gMultiNum = 20000;
+
+    var gFilterSet = new Set();
+    var gData = null;
+    var gExchanges = null;
+
+    function getRatio(max_bid, min_ask) {
+      var r = 100 * (max_bid - min_ask) / min_ask
+      console.log("Ratio=" + r + "%")
+      return r;
+    }
+
+    const input = document.getElementById('myInput');
+    input.value = gMultiNum;
+
+    input.addEventListener('input', function () {
+      gMultiNum = this.value;  // 实时更新变量
+      // console.log('gMultiNum 更新为:', gMultiNum);
+    });
+
+    fetch('/files')
+      .then(res => res.json())
+      .then(fileList => {
+        const select = document.getElementById('csvSelect');
+        fileList.reverse().forEach(file => {
+          const option = document.createElement('option');
+          option.value = file;
+          option.textContent = file;
+          select.appendChild(option);
+        });
+        
+
+        select.addEventListener('change', () => loadData(select.value, 0, 30000));
+        if (fileList.length > 0) loadData(fileList[0], 0, 30000);  // 默认加载第一个文件
+      });
+
+    function update_data(start_diff, end_diff) {
+      loadData(gFileName, gStart + start_diff * gMultiNum, gEnd + end_diff * gMultiNum)
+    }
+
+    function loadData(fileName, start, end) {
+      start = Math.max(0, start)
+      fetch(`/data?file=${fileName}&start=${start}&end=${end}`)
+        .then(res => res.json())
+        .then(data => {
+          gFileName = fileName;
+          gStart = start;
+          gEnd = end;
+          document.getElementById('start').innerHTML = `<b>${gStart}</b>`
+          document.getElementById('end').innerHTML = `<b>${gEnd}</b>`
+
+          console.log(data)
+
+          gData = data;
+
+          const exchanges = [...new Set(data.map(d => d.exchange))].sort();
+
+          gExchanges = exchanges;
+
+          filter(exchanges);
+          updatePage()
+
+        });
+    }
+
+    function updatePage() {
+      console.log(gFilterSet)
+
+      const filteredData = gData.filter(d => !gFilterSet.has(d.exchange));
+
+
+      drawData(filteredData, gFileName)
+      initTabulatorTable("#example-table", filteredData);
+
+    }
+
+    function all_cancle_rev() {
+      if (gFilterSet.size != gExchanges.size) {
+        gExchanges.forEach(element => {
+          gFilterSet.add(element)
+        });
+      } else {
+        gFilterSet.clear()
+      }
+      updatePage();
+    }
+
+    function filter(exchanges) {
+      const container = document.getElementById("filter");
+      container.innerHTML = "";
+
+      exchanges.forEach(item => {
+        const span = document.createElement("span");
+        span.textContent = item;
+        span.style.marginRight = "10px";  // 可选：增加间距
+        span.style.padding = "1px 2px";
+        span.style.border = "1px solid #ccc";
+        span.style.borderRadius = "4px";
+        span.style.display = "inline-block";
+        span.style.fontSize = "11px";
+        if (!gFilterSet.has(item)) {
+          span.style.backgroundColor = "#d3f583";
+        } else {
+          span.style.backgroundColor = "#f5f5f5";
+
+        }
+
+        span.addEventListener("click", () => {
+          if (gFilterSet.has(item)) {
+            span.style.backgroundColor = "#d3f583";
+            gFilterSet.delete(item)
+          } else {
+            span.style.backgroundColor = "#f5f5f5";
+            gFilterSet.add(item)
+          }
+          updatePage();
+        });
+
+        container.appendChild(span);
+
+      });
+    }
+  </script>
+</body>
+
+</html>
