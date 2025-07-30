@@ -75,17 +75,57 @@
       .then(res => res.json())
       .then(fileList => {
         const select = document.getElementById('csvSelect');
+        const lastSelected = localStorage.getItem('lastSelectedFile');
+
         fileList.reverse().forEach(file => {
           const option = document.createElement('option');
           option.value = file;
           option.textContent = file;
+
+          // 设置背景为绿色，如果是上次选中的文件
+          if (file === lastSelected) {
+            option.style.backgroundColor = 'lightgreen';
+          }
+
           select.appendChild(option);
         });
-        
 
-        select.addEventListener('change', () => loadData(select.value, 0, 30000));
-        if (fileList.length > 0) loadData(fileList[0], 0, 30000);  // 默认加载第一个文件
+        select.addEventListener('change', () => {
+          const selectedFile = select.value;
+          localStorage.setItem('lastSelectedFile', selectedFile); // 保存选择
+          loadData(selectedFile, 0, 30000);
+
+          // 重置所有选项颜色
+          Array.from(select.options).forEach(opt => {
+            opt.style.backgroundColor = (opt.value === selectedFile) ? 'lightgreen' : '';
+          });
+        });
+
+        // 如果有上次选中的文件，默认选中它
+        if (lastSelected && fileList.includes(lastSelected)) {
+          select.value = lastSelected;
+          loadData(lastSelected, 0, 30000);
+        } else if (fileList.length > 0) {
+          loadData(fileList[0], 0, 30000); // 默认加载第一个
+        }
       });
+
+
+    // fetch('/files')
+    //   .then(res => res.json())
+    //   .then(fileList => {
+    //     const select = document.getElementById('csvSelect');
+    //     fileList.reverse().forEach(file => {
+    //       const option = document.createElement('option');
+    //       option.value = file;
+    //       option.textContent = file;
+    //       select.appendChild(option);
+    //     });
+
+
+    //     select.addEventListener('change', () => loadData(select.value, 0, 30000));
+    //     if (fileList.length > 0) loadData(fileList[0], 0, 30000);  // 默认加载第一个文件
+    //   });
 
     function update_data(start_diff, end_diff) {
       loadData(gFileName, gStart + start_diff * gMultiNum, gEnd + end_diff * gMultiNum)
