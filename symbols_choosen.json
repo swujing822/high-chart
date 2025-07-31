@@ -1,0 +1,2532 @@
+[
+  [
+    {
+      "name": "ascendex",
+      "spread_avg_pct": "0.6516%",
+      "spread_avg": 0.6515625120696247,
+      "symbols": [
+        "UNI/USDT:USDT"
+      ]
+    },
+    {
+      "name": "whitebit",
+      "spread_avg_pct": "0.1762%",
+      "spread_avg": 0.176188970083353,
+      "symbols": [
+        "UNI/USDT:USDT"
+      ]
+    },
+    {
+      "name": "hitbtc",
+      "spread_avg_pct": "0.1203%",
+      "spread_avg": 0.12032261381900954,
+      "symbols": [
+        "UNI/USDT:USDT"
+      ]
+    },
+    {
+      "name": "bitfinex",
+      "spread_avg_pct": "0.1166%",
+      "spread_avg": 0.11659693053427798,
+      "symbols": [
+        "UNI/USDT:USDT"
+      ]
+    },
+    {
+      "name": "apex",
+      "spread_avg_pct": "0.1129%",
+      "spread_avg": 0.11287410022145444,
+      "symbols": [
+        "UNI/USDT:USDT"
+      ]
+    },
+    {
+      "name": "phemex",
+      "spread_avg_pct": "0.0558%",
+      "spread_avg": 0.055821304082051784,
+      "symbols": [
+        "UNI/USDT:USDT"
+      ]
+    },
+    {
+      "name": "coincatch",
+      "spread_avg_pct": "0.0475%",
+      "spread_avg": 0.04750015848362221,
+      "symbols": [
+        "UNI/USDT:USDT"
+      ]
+    },
+    {
+      "name": "huobi",
+      "spread_avg_pct": "0.0457%",
+      "spread_avg": 0.0456614056649951,
+      "symbols": [
+        "UNI/USDT:USDT"
+      ]
+    },
+    {
+      "name": "htx",
+      "spread_avg_pct": "0.0456%",
+      "spread_avg": 0.04564919980622163,
+      "symbols": [
+        "UNI/USDT:USDT"
+      ]
+    },
+    {
+      "name": "xt",
+      "spread_avg_pct": "0.0451%",
+      "spread_avg": 0.04508189751139374,
+      "symbols": [
+        "UNI/USDT:USDT"
+      ]
+    },
+    {
+      "name": "blofin",
+      "spread_avg_pct": "0.0236%",
+      "spread_avg": 0.02356338303205244,
+      "symbols": [
+        "UNI/USDT:USDT"
+      ]
+    },
+    {
+      "name": "gateio",
+      "spread_avg_pct": "0.0174%",
+      "spread_avg": 0.017399639044245057,
+      "symbols": [
+        "UNI/USDT:USDT"
+      ]
+    },
+    {
+      "name": "gate",
+      "spread_avg_pct": "0.0174%",
+      "spread_avg": 0.01737805450545848,
+      "symbols": [
+        "UNI/USDT:USDT"
+      ]
+    },
+    {
+      "name": "bitget",
+      "spread_avg_pct": "0.0109%",
+      "spread_avg": 0.010880234596090296,
+      "symbols": [
+        "UNI/USDT:USDT"
+      ]
+    },
+    {
+      "name": "okx",
+      "spread_avg_pct": "0.0095%",
+      "spread_avg": 0.009505573387637647,
+      "symbols": [
+        "UNI/USDT:USDT"
+      ]
+    },
+    {
+      "name": "okxus",
+      "spread_avg_pct": "0.0095%",
+      "spread_avg": 0.009491730365210518,
+      "symbols": [
+        "UNI/USDT:USDT"
+      ]
+    }
+  ],
+  [
+    {
+      "name": "ascendex",
+      "spread_avg_pct": "0.8379%",
+      "spread_avg": 0.8379390265644524,
+      "symbols": [
+        "ZK/USDT:USDT"
+      ]
+    },
+    {
+      "name": "whitebit",
+      "spread_avg_pct": "0.3367%",
+      "spread_avg": 0.33674891729994094,
+      "symbols": [
+        "ZK/USDT:USDT"
+      ]
+    },
+    {
+      "name": "huobi",
+      "spread_avg_pct": "0.2632%",
+      "spread_avg": 0.2632199082240258,
+      "symbols": [
+        "ZK/USDT:USDT"
+      ]
+    },
+    {
+      "name": "htx",
+      "spread_avg_pct": "0.2619%",
+      "spread_avg": 0.2618504541541215,
+      "symbols": [
+        "ZK/USDT:USDT"
+      ]
+    },
+    {
+      "name": "apex",
+      "spread_avg_pct": "0.2403%",
+      "spread_avg": 0.24025278061281996,
+      "symbols": [
+        "ZK/USDT:USDT"
+      ]
+    },
+    {
+      "name": "phemex",
+      "spread_avg_pct": "0.2061%",
+      "spread_avg": 0.2060911881175114,
+      "symbols": [
+        "ZK/USDT:USDT"
+      ]
+    },
+    {
+      "name": "xt",
+      "spread_avg_pct": "0.1927%",
+      "spread_avg": 0.19267948908956037,
+      "symbols": [
+        "ZK/USDT:USDT"
+      ]
+    },
+    {
+      "name": "gateio",
+      "spread_avg_pct": "0.1721%",
+      "spread_avg": 0.17206111135200264,
+      "symbols": [
+        "ZK/USDT:USDT"
+      ]
+    },
+    {
+      "name": "gate",
+      "spread_avg_pct": "0.1720%",
+      "spread_avg": 0.1720040661549895,
+      "symbols": [
+        "ZK/USDT:USDT"
+      ]
+    },
+    {
+      "name": "bitget",
+      "spread_avg_pct": "0.0717%",
+      "spread_avg": 0.07174061047693851,
+      "symbols": [
+        "ZK/USDT:USDT"
+      ]
+    },
+    {
+      "name": "okxus",
+      "spread_avg_pct": "0.0446%",
+      "spread_avg": 0.04456252582409748,
+      "symbols": [
+        "ZK/USDT:USDT"
+      ]
+    },
+    {
+      "name": "okx",
+      "spread_avg_pct": "0.0410%",
+      "spread_avg": 0.041002098080250106,
+      "symbols": [
+        "ZK/USDT:USDT"
+      ]
+    },
+    {
+      "name": "blofin",
+      "spread_avg_pct": "-0.5172%",
+      "spread_avg": -0.5171509820565375,
+      "symbols": [
+        "ZK/USDT:USDT"
+      ]
+    }
+  ],
+  [
+    {
+      "name": "ascendex",
+      "spread_avg_pct": "0.5521%",
+      "spread_avg": 0.5520566336866053,
+      "symbols": [
+        "XTZ/USDT:USDT"
+      ]
+    },
+    {
+      "name": "htx",
+      "spread_avg_pct": "0.2449%",
+      "spread_avg": 0.24485242410120933,
+      "symbols": [
+        "XTZ/USDT:USDT"
+      ]
+    },
+    {
+      "name": "huobi",
+      "spread_avg_pct": "0.2440%",
+      "spread_avg": 0.24398391282662235,
+      "symbols": [
+        "XTZ/USDT:USDT"
+      ]
+    },
+    {
+      "name": "whitebit",
+      "spread_avg_pct": "0.1863%",
+      "spread_avg": 0.1862618192069499,
+      "symbols": [
+        "XTZ/USDT:USDT"
+      ]
+    },
+    {
+      "name": "hitbtc",
+      "spread_avg_pct": "0.1741%",
+      "spread_avg": 0.17406703401700405,
+      "symbols": [
+        "XTZ/USDT:USDT"
+      ]
+    },
+    {
+      "name": "bitfinex",
+      "spread_avg_pct": "0.1331%",
+      "spread_avg": 0.13313274585191556,
+      "symbols": [
+        "XTZ/USDT:USDT"
+      ]
+    },
+    {
+      "name": "phemex",
+      "spread_avg_pct": "0.1272%",
+      "spread_avg": 0.12715169365462664,
+      "symbols": [
+        "XTZ/USDT:USDT"
+      ]
+    },
+    {
+      "name": "gateio",
+      "spread_avg_pct": "0.1168%",
+      "spread_avg": 0.11675969921863442,
+      "symbols": [
+        "XTZ/USDT:USDT"
+      ]
+    },
+    {
+      "name": "gate",
+      "spread_avg_pct": "0.1168%",
+      "spread_avg": 0.11675962257607583,
+      "symbols": [
+        "XTZ/USDT:USDT"
+      ]
+    },
+    {
+      "name": "okx",
+      "spread_avg_pct": "0.0149%",
+      "spread_avg": 0.014857410548479034,
+      "symbols": [
+        "XTZ/USDT:USDT"
+      ]
+    },
+    {
+      "name": "mexc",
+      "spread_avg_pct": "0.0120%",
+      "spread_avg": 0.01202633144501536,
+      "symbols": [
+        "XTZ/USDT:USDT"
+      ]
+    }
+  ],
+  [
+    {
+      "name": "ascendex",
+      "spread_avg_pct": "0.4661%",
+      "spread_avg": 0.466143277723273,
+      "symbols": [
+        "W/USDT:USDT"
+      ]
+    },
+    {
+      "name": "whitebit",
+      "spread_avg_pct": "0.2968%",
+      "spread_avg": 0.29679945106651284,
+      "symbols": [
+        "W/USDT:USDT"
+      ]
+    },
+    {
+      "name": "gateio",
+      "spread_avg_pct": "0.1328%",
+      "spread_avg": 0.132754294950559,
+      "symbols": [
+        "W/USDT:USDT"
+      ]
+    },
+    {
+      "name": "gate",
+      "spread_avg_pct": "0.1322%",
+      "spread_avg": 0.13217433931099026,
+      "symbols": [
+        "W/USDT:USDT"
+      ]
+    },
+    {
+      "name": "phemex",
+      "spread_avg_pct": "0.1284%",
+      "spread_avg": 0.12836348434016737,
+      "symbols": [
+        "W/USDT:USDT"
+      ]
+    },
+    {
+      "name": "xt",
+      "spread_avg_pct": "0.1239%",
+      "spread_avg": 0.12390106885824267,
+      "symbols": [
+        "W/USDT:USDT"
+      ]
+    },
+    {
+      "name": "huobi",
+      "spread_avg_pct": "0.0979%",
+      "spread_avg": 0.09787197374857029,
+      "symbols": [
+        "W/USDT:USDT"
+      ]
+    },
+    {
+      "name": "htx",
+      "spread_avg_pct": "0.0976%",
+      "spread_avg": 0.09763273920302762,
+      "symbols": [
+        "W/USDT:USDT"
+      ]
+    },
+    {
+      "name": "coincatch",
+      "spread_avg_pct": "0.0864%",
+      "spread_avg": 0.0863613740471133,
+      "symbols": [
+        "W/USDT:USDT"
+      ]
+    },
+    {
+      "name": "bitget",
+      "spread_avg_pct": "0.0613%",
+      "spread_avg": 0.061310012477536896,
+      "symbols": [
+        "W/USDT:USDT"
+      ]
+    },
+    {
+      "name": "okxus",
+      "spread_avg_pct": "0.0284%",
+      "spread_avg": 0.02838005034576185,
+      "symbols": [
+        "W/USDT:USDT"
+      ]
+    },
+    {
+      "name": "okx",
+      "spread_avg_pct": "0.0262%",
+      "spread_avg": 0.02624391761664254,
+      "symbols": [
+        "W/USDT:USDT"
+      ]
+    },
+    {
+      "name": "blofin",
+      "spread_avg_pct": "-0.3806%",
+      "spread_avg": -0.380608490719738,
+      "symbols": [
+        "W/USDT:USDT"
+      ]
+    }
+  ],
+  [
+    {
+      "name": "whitebit",
+      "spread_avg_pct": "0.6751%",
+      "spread_avg": 0.6750727458969593,
+      "symbols": [
+        "WCT/USDT:USDT"
+      ]
+    },
+    {
+      "name": "htx",
+      "spread_avg_pct": "0.5425%",
+      "spread_avg": 0.5425253181640248,
+      "symbols": [
+        "WCT/USDT:USDT"
+      ]
+    },
+    {
+      "name": "huobi",
+      "spread_avg_pct": "0.5402%",
+      "spread_avg": 0.5402046089942264,
+      "symbols": [
+        "WCT/USDT:USDT"
+      ]
+    },
+    {
+      "name": "apex",
+      "spread_avg_pct": "0.1713%",
+      "spread_avg": 0.1712859325359338,
+      "symbols": [
+        "WCT/USDT:USDT"
+      ]
+    },
+    {
+      "name": "coincatch",
+      "spread_avg_pct": "0.0920%",
+      "spread_avg": 0.09199498401373228,
+      "symbols": [
+        "WCT/USDT:USDT"
+      ]
+    },
+    {
+      "name": "gateio",
+      "spread_avg_pct": "0.0646%",
+      "spread_avg": 0.06457119659904255,
+      "symbols": [
+        "WCT/USDT:USDT"
+      ]
+    },
+    {
+      "name": "gate",
+      "spread_avg_pct": "0.0643%",
+      "spread_avg": 0.06428493522830557,
+      "symbols": [
+        "WCT/USDT:USDT"
+      ]
+    },
+    {
+      "name": "phemex",
+      "spread_avg_pct": "0.0593%",
+      "spread_avg": 0.05932202927058338,
+      "symbols": [
+        "WCT/USDT:USDT"
+      ]
+    },
+    {
+      "name": "bitget",
+      "spread_avg_pct": "0.0432%",
+      "spread_avg": 0.043151650167660885,
+      "symbols": [
+        "WCT/USDT:USDT"
+      ]
+    },
+    {
+      "name": "okxus",
+      "spread_avg_pct": "0.0315%",
+      "spread_avg": 0.031532524324974054,
+      "symbols": [
+        "WCT/USDT:USDT"
+      ]
+    },
+    {
+      "name": "mexc",
+      "spread_avg_pct": "0.0309%",
+      "spread_avg": 0.030864745560705655,
+      "symbols": [
+        "WCT/USDT:USDT"
+      ]
+    },
+    {
+      "name": "xt",
+      "spread_avg_pct": "0.0307%",
+      "spread_avg": 0.030725877664237837,
+      "symbols": [
+        "WCT/USDT:USDT"
+      ]
+    },
+    {
+      "name": "okx",
+      "spread_avg_pct": "0.0306%",
+      "spread_avg": 0.03063928399305844,
+      "symbols": [
+        "WCT/USDT:USDT"
+      ]
+    },
+    {
+      "name": "blofin",
+      "spread_avg_pct": "-0.3520%",
+      "spread_avg": -0.35200489745944424,
+      "symbols": [
+        "WCT/USDT:USDT"
+      ]
+    }
+  ],
+  [
+    {
+      "name": "whitebit",
+      "spread_avg_pct": "0.4724%",
+      "spread_avg": 0.47243333844484436,
+      "symbols": [
+        "VIRTUAL/USDT:USDT"
+      ]
+    },
+    {
+      "name": "hashkey",
+      "spread_avg_pct": "0.3028%",
+      "spread_avg": 0.30278598126614814,
+      "symbols": [
+        "VIRTUAL/USDT:USDT"
+      ]
+    },
+    {
+      "name": "htx",
+      "spread_avg_pct": "0.0760%",
+      "spread_avg": 0.07603325833666129,
+      "symbols": [
+        "VIRTUAL/USDT:USDT"
+      ]
+    },
+    {
+      "name": "huobi",
+      "spread_avg_pct": "0.0758%",
+      "spread_avg": 0.0758240811236392,
+      "symbols": [
+        "VIRTUAL/USDT:USDT"
+      ]
+    },
+    {
+      "name": "coincatch",
+      "spread_avg_pct": "0.0654%",
+      "spread_avg": 0.0654237311975522,
+      "symbols": [
+        "VIRTUAL/USDT:USDT"
+      ]
+    },
+    {
+      "name": "apex",
+      "spread_avg_pct": "0.0597%",
+      "spread_avg": 0.05971319559332213,
+      "symbols": [
+        "VIRTUAL/USDT:USDT"
+      ]
+    },
+    {
+      "name": "phemex",
+      "spread_avg_pct": "0.0505%",
+      "spread_avg": 0.050507418466952246,
+      "symbols": [
+        "VIRTUAL/USDT:USDT"
+      ]
+    },
+    {
+      "name": "gateio",
+      "spread_avg_pct": "0.0290%",
+      "spread_avg": 0.029045642407628264,
+      "symbols": [
+        "VIRTUAL/USDT:USDT"
+      ]
+    },
+    {
+      "name": "gate",
+      "spread_avg_pct": "0.0290%",
+      "spread_avg": 0.029011730334483742,
+      "symbols": [
+        "VIRTUAL/USDT:USDT"
+      ]
+    },
+    {
+      "name": "bitget",
+      "spread_avg_pct": "0.0142%",
+      "spread_avg": 0.01423258742286382,
+      "symbols": [
+        "VIRTUAL/USDT:USDT"
+      ]
+    },
+    {
+      "name": "okx",
+      "spread_avg_pct": "0.0089%",
+      "spread_avg": 0.008859085664063352,
+      "symbols": [
+        "VIRTUAL/USDT:USDT"
+      ]
+    },
+    {
+      "name": "mexc",
+      "spread_avg_pct": "0.0075%",
+      "spread_avg": 0.007515325493951974,
+      "symbols": [
+        "VIRTUAL/USDT:USDT"
+      ]
+    },
+    {
+      "name": "blofin",
+      "spread_avg_pct": "-0.1831%",
+      "spread_avg": -0.18307514716903833,
+      "symbols": [
+        "VIRTUAL/USDT:USDT"
+      ]
+    }
+  ],
+  [
+    {
+      "name": "whitebit",
+      "spread_avg_pct": "0.3073%",
+      "spread_avg": 0.3073158842221469,
+      "symbols": [
+        "VANA/USDT:USDT"
+      ]
+    },
+    {
+      "name": "ascendex",
+      "spread_avg_pct": "0.1972%",
+      "spread_avg": 0.19723865877712074,
+      "symbols": [
+        "VANA/USDT:USDT"
+      ]
+    },
+    {
+      "name": "gateio",
+      "spread_avg_pct": "0.1422%",
+      "spread_avg": 0.14216309263593604,
+      "symbols": [
+        "VANA/USDT:USDT"
+      ]
+    },
+    {
+      "name": "gate",
+      "spread_avg_pct": "0.1418%",
+      "spread_avg": 0.141788702126267,
+      "symbols": [
+        "VANA/USDT:USDT"
+      ]
+    },
+    {
+      "name": "coincatch",
+      "spread_avg_pct": "0.0782%",
+      "spread_avg": 0.0782445700197462,
+      "symbols": [
+        "VANA/USDT:USDT"
+      ]
+    },
+    {
+      "name": "phemex",
+      "spread_avg_pct": "0.0562%",
+      "spread_avg": 0.05622850810380685,
+      "symbols": [
+        "VANA/USDT:USDT"
+      ]
+    },
+    {
+      "name": "xt",
+      "spread_avg_pct": "0.0541%",
+      "spread_avg": 0.05405026911994127,
+      "symbols": [
+        "VANA/USDT:USDT"
+      ]
+    },
+    {
+      "name": "bitget",
+      "spread_avg_pct": "0.0540%",
+      "spread_avg": 0.053983349680633244,
+      "symbols": [
+        "VANA/USDT:USDT"
+      ]
+    },
+    {
+      "name": "okx",
+      "spread_avg_pct": "0.0375%",
+      "spread_avg": 0.03748080320395709,
+      "symbols": [
+        "VANA/USDT:USDT"
+      ]
+    },
+    {
+      "name": "okxus",
+      "spread_avg_pct": "0.0363%",
+      "spread_avg": 0.03629481917882699,
+      "symbols": [
+        "VANA/USDT:USDT"
+      ]
+    },
+    {
+      "name": "blofin",
+      "spread_avg_pct": "-0.3142%",
+      "spread_avg": -0.31424997497660845,
+      "symbols": [
+        "VANA/USDT:USDT"
+      ]
+    }
+  ],
+  [
+    {
+      "name": "whitebit",
+      "spread_avg_pct": "0.4102%",
+      "spread_avg": 0.410154960771225,
+      "symbols": [
+        "STRK/USDT:USDT"
+      ]
+    },
+    {
+      "name": "coincatch",
+      "spread_avg_pct": "0.2388%",
+      "spread_avg": 0.2387560977373878,
+      "symbols": [
+        "STRK/USDT:USDT"
+      ]
+    },
+    {
+      "name": "gateio",
+      "spread_avg_pct": "0.1097%",
+      "spread_avg": 0.10973739076907739,
+      "symbols": [
+        "STRK/USDT:USDT"
+      ]
+    },
+    {
+      "name": "gate",
+      "spread_avg_pct": "0.1097%",
+      "spread_avg": 0.10972249378977433,
+      "symbols": [
+        "STRK/USDT:USDT"
+      ]
+    },
+    {
+      "name": "huobi",
+      "spread_avg_pct": "0.0881%",
+      "spread_avg": 0.08814264290118443,
+      "symbols": [
+        "STRK/USDT:USDT"
+      ]
+    },
+    {
+      "name": "htx",
+      "spread_avg_pct": "0.0878%",
+      "spread_avg": 0.08779840168195259,
+      "symbols": [
+        "STRK/USDT:USDT"
+      ]
+    },
+    {
+      "name": "phemex",
+      "spread_avg_pct": "0.0835%",
+      "spread_avg": 0.08354172736073628,
+      "symbols": [
+        "STRK/USDT:USDT"
+      ]
+    },
+    {
+      "name": "bitget",
+      "spread_avg_pct": "0.0818%",
+      "spread_avg": 0.08181136204675336,
+      "symbols": [
+        "STRK/USDT:USDT"
+      ]
+    },
+    {
+      "name": "okxus",
+      "spread_avg_pct": "0.0796%",
+      "spread_avg": 0.0795693801042646,
+      "symbols": [
+        "STRK/USDT:USDT"
+      ]
+    },
+    {
+      "name": "xt",
+      "spread_avg_pct": "0.0796%",
+      "spread_avg": 0.07956025096877549,
+      "symbols": [
+        "STRK/USDT:USDT"
+      ]
+    },
+    {
+      "name": "okx",
+      "spread_avg_pct": "0.0795%",
+      "spread_avg": 0.07953693385751663,
+      "symbols": [
+        "STRK/USDT:USDT"
+      ]
+    },
+    {
+      "name": "blofin",
+      "spread_avg_pct": "-0.2556%",
+      "spread_avg": -0.25563652583635815,
+      "symbols": [
+        "STRK/USDT:USDT"
+      ]
+    }
+  ],
+  [
+    {
+      "name": "ascendex",
+      "spread_avg_pct": "0.4910%",
+      "spread_avg": 0.49099836333880104,
+      "symbols": [
+        "SNX/USDT:USDT"
+      ]
+    },
+    {
+      "name": "gateio",
+      "spread_avg_pct": "0.2622%",
+      "spread_avg": 0.26221666005179217,
+      "symbols": [
+        "SNX/USDT:USDT"
+      ]
+    },
+    {
+      "name": "gate",
+      "spread_avg_pct": "0.2617%",
+      "spread_avg": 0.2616998712939351,
+      "symbols": [
+        "SNX/USDT:USDT"
+      ]
+    },
+    {
+      "name": "huobi",
+      "spread_avg_pct": "0.2299%",
+      "spread_avg": 0.2299325532252726,
+      "symbols": [
+        "SNX/USDT:USDT"
+      ]
+    },
+    {
+      "name": "htx",
+      "spread_avg_pct": "0.2297%",
+      "spread_avg": 0.22971724981617628,
+      "symbols": [
+        "SNX/USDT:USDT"
+      ]
+    },
+    {
+      "name": "whitebit",
+      "spread_avg_pct": "0.2247%",
+      "spread_avg": 0.22468661073823726,
+      "symbols": [
+        "SNX/USDT:USDT"
+      ]
+    },
+    {
+      "name": "phemex",
+      "spread_avg_pct": "0.1702%",
+      "spread_avg": 0.1701521488000073,
+      "symbols": [
+        "SNX/USDT:USDT"
+      ]
+    },
+    {
+      "name": "xt",
+      "spread_avg_pct": "0.1638%",
+      "spread_avg": 0.16375667299272562,
+      "symbols": [
+        "SNX/USDT:USDT"
+      ]
+    },
+    {
+      "name": "coincatch",
+      "spread_avg_pct": "0.1186%",
+      "spread_avg": 0.11858344181311946,
+      "symbols": [
+        "SNX/USDT:USDT"
+      ]
+    },
+    {
+      "name": "bitget",
+      "spread_avg_pct": "0.0868%",
+      "spread_avg": 0.08681858580386723,
+      "symbols": [
+        "SNX/USDT:USDT"
+      ]
+    },
+    {
+      "name": "okx",
+      "spread_avg_pct": "0.0290%",
+      "spread_avg": 0.028991632344064364,
+      "symbols": [
+        "SNX/USDT:USDT"
+      ]
+    },
+    {
+      "name": "okxus",
+      "spread_avg_pct": "0.0260%",
+      "spread_avg": 0.026004513524442052,
+      "symbols": [
+        "SNX/USDT:USDT"
+      ]
+    },
+    {
+      "name": "blofin",
+      "spread_avg_pct": "-0.3293%",
+      "spread_avg": -0.3292763181383947,
+      "symbols": [
+        "SNX/USDT:USDT"
+      ]
+    }
+  ],
+  [
+    {
+      "name": "htx",
+      "spread_avg_pct": "0.4819%",
+      "spread_avg": 0.48189578264522265,
+      "symbols": [
+        "SIGN/USDT:USDT"
+      ]
+    },
+    {
+      "name": "huobi",
+      "spread_avg_pct": "0.4818%",
+      "spread_avg": 0.4818425281337696,
+      "symbols": [
+        "SIGN/USDT:USDT"
+      ]
+    },
+    {
+      "name": "whitebit",
+      "spread_avg_pct": "0.2691%",
+      "spread_avg": 0.26906667587319405,
+      "symbols": [
+        "SIGN/USDT:USDT"
+      ]
+    },
+    {
+      "name": "gateio",
+      "spread_avg_pct": "0.1039%",
+      "spread_avg": 0.10387095255608161,
+      "symbols": [
+        "SIGN/USDT:USDT"
+      ]
+    },
+    {
+      "name": "apex",
+      "spread_avg_pct": "0.1036%",
+      "spread_avg": 0.10356187202878156,
+      "symbols": [
+        "SIGN/USDT:USDT"
+      ]
+    },
+    {
+      "name": "gate",
+      "spread_avg_pct": "0.1035%",
+      "spread_avg": 0.10351093156040508,
+      "symbols": [
+        "SIGN/USDT:USDT"
+      ]
+    },
+    {
+      "name": "bitget",
+      "spread_avg_pct": "0.0670%",
+      "spread_avg": 0.0670306883641223,
+      "symbols": [
+        "SIGN/USDT:USDT"
+      ]
+    },
+    {
+      "name": "phemex",
+      "spread_avg_pct": "0.0453%",
+      "spread_avg": 0.04526727300101755,
+      "symbols": [
+        "SIGN/USDT:USDT"
+      ]
+    },
+    {
+      "name": "coincatch",
+      "spread_avg_pct": "0.0404%",
+      "spread_avg": 0.04042666127050379,
+      "symbols": [
+        "SIGN/USDT:USDT"
+      ]
+    },
+    {
+      "name": "okx",
+      "spread_avg_pct": "0.0360%",
+      "spread_avg": 0.035968729727129306,
+      "symbols": [
+        "SIGN/USDT:USDT"
+      ]
+    },
+    {
+      "name": "okxus",
+      "spread_avg_pct": "0.0336%",
+      "spread_avg": 0.03356416591536967,
+      "symbols": [
+        "SIGN/USDT:USDT"
+      ]
+    },
+    {
+      "name": "blofin",
+      "spread_avg_pct": "-0.3333%",
+      "spread_avg": -0.33327538241630017,
+      "symbols": [
+        "SIGN/USDT:USDT"
+      ]
+    }
+  ],
+  [
+    {
+      "name": "whitebit",
+      "spread_avg_pct": "0.5963%",
+      "spread_avg": 0.5963350636401551,
+      "symbols": [
+        "SEI/USDT:USDT"
+      ]
+    },
+    {
+      "name": "ascendex",
+      "spread_avg_pct": "0.4329%",
+      "spread_avg": 0.4328678448748628,
+      "symbols": [
+        "SEI/USDT:USDT"
+      ]
+    },
+    {
+      "name": "apex",
+      "spread_avg_pct": "0.3846%",
+      "spread_avg": 0.38457535597135256,
+      "symbols": [
+        "SEI/USDT:USDT"
+      ]
+    },
+    {
+      "name": "coincatch",
+      "spread_avg_pct": "0.0895%",
+      "spread_avg": 0.08945556562954915,
+      "symbols": [
+        "SEI/USDT:USDT"
+      ]
+    },
+    {
+      "name": "htx",
+      "spread_avg_pct": "0.0848%",
+      "spread_avg": 0.08476767940474304,
+      "symbols": [
+        "SEI/USDT:USDT"
+      ]
+    },
+    {
+      "name": "huobi",
+      "spread_avg_pct": "0.0842%",
+      "spread_avg": 0.08424135199285421,
+      "symbols": [
+        "SEI/USDT:USDT"
+      ]
+    },
+    {
+      "name": "gateio",
+      "spread_avg_pct": "0.0597%",
+      "spread_avg": 0.059714939683122296,
+      "symbols": [
+        "SEI/USDT:USDT"
+      ]
+    },
+    {
+      "name": "gate",
+      "spread_avg_pct": "0.0597%",
+      "spread_avg": 0.05968854644179825,
+      "symbols": [
+        "SEI/USDT:USDT"
+      ]
+    },
+    {
+      "name": "phemex",
+      "spread_avg_pct": "0.0414%",
+      "spread_avg": 0.04135451495183245,
+      "symbols": [
+        "SEI/USDT:USDT"
+      ]
+    },
+    {
+      "name": "mexc",
+      "spread_avg_pct": "0.0340%",
+      "spread_avg": 0.03403131565413036,
+      "symbols": [
+        "SEI/USDT:USDT"
+      ]
+    },
+    {
+      "name": "bitget",
+      "spread_avg_pct": "0.0083%",
+      "spread_avg": 0.008335128854371994,
+      "symbols": [
+        "SEI/USDT:USDT"
+      ]
+    },
+    {
+      "name": "blofin",
+      "spread_avg_pct": "-0.2363%",
+      "spread_avg": -0.23628751225104608,
+      "symbols": [
+        "SEI/USDT:USDT"
+      ]
+    }
+  ],
+  [
+    {
+      "name": "whitebit",
+      "spread_avg_pct": "0.5963%",
+      "spread_avg": 0.5963350636401551,
+      "symbols": [
+        "SEI/USDT:USDT"
+      ]
+    },
+    {
+      "name": "ascendex",
+      "spread_avg_pct": "0.4329%",
+      "spread_avg": 0.4328678448748628,
+      "symbols": [
+        "SEI/USDT:USDT"
+      ]
+    },
+    {
+      "name": "apex",
+      "spread_avg_pct": "0.3846%",
+      "spread_avg": 0.38457535597135256,
+      "symbols": [
+        "SEI/USDT:USDT"
+      ]
+    },
+    {
+      "name": "coincatch",
+      "spread_avg_pct": "0.0895%",
+      "spread_avg": 0.08945556562954915,
+      "symbols": [
+        "SEI/USDT:USDT"
+      ]
+    },
+    {
+      "name": "htx",
+      "spread_avg_pct": "0.0848%",
+      "spread_avg": 0.08476767940474304,
+      "symbols": [
+        "SEI/USDT:USDT"
+      ]
+    },
+    {
+      "name": "huobi",
+      "spread_avg_pct": "0.0842%",
+      "spread_avg": 0.08424135199285421,
+      "symbols": [
+        "SEI/USDT:USDT"
+      ]
+    },
+    {
+      "name": "gateio",
+      "spread_avg_pct": "0.0597%",
+      "spread_avg": 0.059714939683122296,
+      "symbols": [
+        "SEI/USDT:USDT"
+      ]
+    },
+    {
+      "name": "gate",
+      "spread_avg_pct": "0.0597%",
+      "spread_avg": 0.05968854644179825,
+      "symbols": [
+        "SEI/USDT:USDT"
+      ]
+    },
+    {
+      "name": "phemex",
+      "spread_avg_pct": "0.0414%",
+      "spread_avg": 0.04135451495183245,
+      "symbols": [
+        "SEI/USDT:USDT"
+      ]
+    },
+    {
+      "name": "mexc",
+      "spread_avg_pct": "0.0340%",
+      "spread_avg": 0.03403131565413036,
+      "symbols": [
+        "SEI/USDT:USDT"
+      ]
+    },
+    {
+      "name": "bitget",
+      "spread_avg_pct": "0.0083%",
+      "spread_avg": 0.008335128854371994,
+      "symbols": [
+        "SEI/USDT:USDT"
+      ]
+    },
+    {
+      "name": "blofin",
+      "spread_avg_pct": "-0.2363%",
+      "spread_avg": -0.23628751225104608,
+      "symbols": [
+        "SEI/USDT:USDT"
+      ]
+    }
+  ],
+  [
+    {
+      "name": "whitebit",
+      "spread_avg_pct": "0.3390%",
+      "spread_avg": 0.3389577526877371,
+      "symbols": [
+        "SAHARA/USDT:USDT"
+      ]
+    },
+    {
+      "name": "huobi",
+      "spread_avg_pct": "0.2139%",
+      "spread_avg": 0.2138825941910724,
+      "symbols": [
+        "SAHARA/USDT:USDT"
+      ]
+    },
+    {
+      "name": "htx",
+      "spread_avg_pct": "0.2137%",
+      "spread_avg": 0.21370258919684845,
+      "symbols": [
+        "SAHARA/USDT:USDT"
+      ]
+    },
+    {
+      "name": "coincatch",
+      "spread_avg_pct": "0.1348%",
+      "spread_avg": 0.13482223071701266,
+      "symbols": [
+        "SAHARA/USDT:USDT"
+      ]
+    },
+    {
+      "name": "gate",
+      "spread_avg_pct": "0.0741%",
+      "spread_avg": 0.07410026976080135,
+      "symbols": [
+        "SAHARA/USDT:USDT"
+      ]
+    },
+    {
+      "name": "gateio",
+      "spread_avg_pct": "0.0740%",
+      "spread_avg": 0.0740405921969374,
+      "symbols": [
+        "SAHARA/USDT:USDT"
+      ]
+    },
+    {
+      "name": "phemex",
+      "spread_avg_pct": "0.0739%",
+      "spread_avg": 0.07393785725416008,
+      "symbols": [
+        "SAHARA/USDT:USDT"
+      ]
+    },
+    {
+      "name": "apex",
+      "spread_avg_pct": "0.0411%",
+      "spread_avg": 0.0410505325701015,
+      "symbols": [
+        "SAHARA/USDT:USDT"
+      ]
+    },
+    {
+      "name": "bitget",
+      "spread_avg_pct": "0.0358%",
+      "spread_avg": 0.03583955809749143,
+      "symbols": [
+        "SAHARA/USDT:USDT"
+      ]
+    },
+    {
+      "name": "okx",
+      "spread_avg_pct": "0.0147%",
+      "spread_avg": 0.014715767928894539,
+      "symbols": [
+        "SAHARA/USDT:USDT"
+      ]
+    },
+    {
+      "name": "okxus",
+      "spread_avg_pct": "0.0139%",
+      "spread_avg": 0.013923948862567443,
+      "symbols": [
+        "SAHARA/USDT:USDT"
+      ]
+    },
+    {
+      "name": "blofin",
+      "spread_avg_pct": "-0.1013%",
+      "spread_avg": -0.1013023425612467,
+      "symbols": [
+        "SAHARA/USDT:USDT"
+      ]
+    }
+  ],
+  [
+    {
+      "name": "huobi",
+      "spread_avg_pct": "0.3114%",
+      "spread_avg": 0.3113699186997706,
+      "symbols": [
+        "MUBARAK/USDT:USDT"
+      ]
+    },
+    {
+      "name": "htx",
+      "spread_avg_pct": "0.3089%",
+      "spread_avg": 0.3088805850112994,
+      "symbols": [
+        "MUBARAK/USDT:USDT"
+      ]
+    },
+    {
+      "name": "apex",
+      "spread_avg_pct": "0.3004%",
+      "spread_avg": 0.3003817312969807,
+      "symbols": [
+        "MUBARAK/USDT:USDT"
+      ]
+    },
+    {
+      "name": "gateio",
+      "spread_avg_pct": "0.1241%",
+      "spread_avg": 0.12408544934951836,
+      "symbols": [
+        "MUBARAK/USDT:USDT"
+      ]
+    },
+    {
+      "name": "gate",
+      "spread_avg_pct": "0.1235%",
+      "spread_avg": 0.12352670038558973,
+      "symbols": [
+        "MUBARAK/USDT:USDT"
+      ]
+    },
+    {
+      "name": "phemex",
+      "spread_avg_pct": "0.0920%",
+      "spread_avg": 0.09199952556839354,
+      "symbols": [
+        "MUBARAK/USDT:USDT"
+      ]
+    },
+    {
+      "name": "hashkey",
+      "spread_avg_pct": "0.0667%",
+      "spread_avg": 0.06670109584811985,
+      "symbols": [
+        "MUBARAK/USDT:USDT"
+      ]
+    },
+    {
+      "name": "okxus",
+      "spread_avg_pct": "0.0616%",
+      "spread_avg": 0.061573453342231924,
+      "symbols": [
+        "MUBARAK/USDT:USDT"
+      ]
+    },
+    {
+      "name": "okx",
+      "spread_avg_pct": "0.0601%",
+      "spread_avg": 0.06005843811941769,
+      "symbols": [
+        "MUBARAK/USDT:USDT"
+      ]
+    },
+    {
+      "name": "mexc",
+      "spread_avg_pct": "0.0395%",
+      "spread_avg": 0.03950110112245852,
+      "symbols": [
+        "MUBARAK/USDT:USDT"
+      ]
+    },
+    {
+      "name": "bitget",
+      "spread_avg_pct": "0.0348%",
+      "spread_avg": 0.034787791451599895,
+      "symbols": [
+        "MUBARAK/USDT:USDT"
+      ]
+    },
+    {
+      "name": "blofin",
+      "spread_avg_pct": "-0.8525%",
+      "spread_avg": -0.8524745441629094,
+      "symbols": [
+        "MUBARAK/USDT:USDT"
+      ]
+    }
+  ],
+  [
+    {
+      "name": "whitebit",
+      "spread_avg_pct": "1.1065%",
+      "spread_avg": 1.1064869378179423,
+      "symbols": [
+        "MOVE/USDT:USDT"
+      ]
+    },
+    {
+      "name": "hashkey",
+      "spread_avg_pct": "0.7269%",
+      "spread_avg": 0.7269110633790826,
+      "symbols": [
+        "MOVE/USDT:USDT"
+      ]
+    },
+    {
+      "name": "coincatch",
+      "spread_avg_pct": "0.2812%",
+      "spread_avg": 0.2811987856636695,
+      "symbols": [
+        "MOVE/USDT:USDT"
+      ]
+    },
+    {
+      "name": "htx",
+      "spread_avg_pct": "0.2119%",
+      "spread_avg": 0.21187297063546415,
+      "symbols": [
+        "MOVE/USDT:USDT"
+      ]
+    },
+    {
+      "name": "huobi",
+      "spread_avg_pct": "0.2115%",
+      "spread_avg": 0.21154060517069387,
+      "symbols": [
+        "MOVE/USDT:USDT"
+      ]
+    },
+    {
+      "name": "phemex",
+      "spread_avg_pct": "0.0962%",
+      "spread_avg": 0.09615325862508974,
+      "symbols": [
+        "MOVE/USDT:USDT"
+      ]
+    },
+    {
+      "name": "gateio",
+      "spread_avg_pct": "0.0851%",
+      "spread_avg": 0.08507238216463828,
+      "symbols": [
+        "MOVE/USDT:USDT"
+      ]
+    },
+    {
+      "name": "gate",
+      "spread_avg_pct": "0.0849%",
+      "spread_avg": 0.08491575625827831,
+      "symbols": [
+        "MOVE/USDT:USDT"
+      ]
+    },
+    {
+      "name": "bitget",
+      "spread_avg_pct": "0.0771%",
+      "spread_avg": 0.07711409283466558,
+      "symbols": [
+        "MOVE/USDT:USDT"
+      ]
+    },
+    {
+      "name": "okx",
+      "spread_avg_pct": "0.0116%",
+      "spread_avg": 0.01157611289290493,
+      "symbols": [
+        "MOVE/USDT:USDT"
+      ]
+    },
+    {
+      "name": "okxus",
+      "spread_avg_pct": "0.0110%",
+      "spread_avg": 0.010964338369521404,
+      "symbols": [
+        "MOVE/USDT:USDT"
+      ]
+    },
+    {
+      "name": "blofin",
+      "spread_avg_pct": "-0.1756%",
+      "spread_avg": -0.17559262510973758,
+      "symbols": [
+        "MOVE/USDT:USDT"
+      ]
+    }
+  ],
+  [
+    {
+      "name": "whitebit",
+      "spread_avg_pct": "0.4056%",
+      "spread_avg": 0.4056290031937808,
+      "symbols": [
+        "MOODENG/USDT:USDT"
+      ]
+    },
+    {
+      "name": "hashkey",
+      "spread_avg_pct": "0.3040%",
+      "spread_avg": 0.30400504833826364,
+      "symbols": [
+        "MOODENG/USDT:USDT"
+      ]
+    },
+    {
+      "name": "apex",
+      "spread_avg_pct": "0.1459%",
+      "spread_avg": 0.14588361349431606,
+      "symbols": [
+        "MOODENG/USDT:USDT"
+      ]
+    },
+    {
+      "name": "phemex",
+      "spread_avg_pct": "0.0760%",
+      "spread_avg": 0.07603538883635262,
+      "symbols": [
+        "MOODENG/USDT:USDT"
+      ]
+    },
+    {
+      "name": "coincatch",
+      "spread_avg_pct": "0.0596%",
+      "spread_avg": 0.05957412351629932,
+      "symbols": [
+        "MOODENG/USDT:USDT"
+      ]
+    },
+    {
+      "name": "htx",
+      "spread_avg_pct": "0.0558%",
+      "spread_avg": 0.05578187440108391,
+      "symbols": [
+        "MOODENG/USDT:USDT"
+      ]
+    },
+    {
+      "name": "huobi",
+      "spread_avg_pct": "0.0554%",
+      "spread_avg": 0.0553524930754478,
+      "symbols": [
+        "MOODENG/USDT:USDT"
+      ]
+    },
+    {
+      "name": "xt",
+      "spread_avg_pct": "0.0377%",
+      "spread_avg": 0.03766241171912185,
+      "symbols": [
+        "MOODENG/USDT:USDT"
+      ]
+    },
+    {
+      "name": "gateio",
+      "spread_avg_pct": "0.0376%",
+      "spread_avg": 0.03762971315083346,
+      "symbols": [
+        "MOODENG/USDT:USDT"
+      ]
+    },
+    {
+      "name": "gate",
+      "spread_avg_pct": "0.0372%",
+      "spread_avg": 0.037201649478889175,
+      "symbols": [
+        "MOODENG/USDT:USDT"
+      ]
+    },
+    {
+      "name": "bitget",
+      "spread_avg_pct": "0.0180%",
+      "spread_avg": 0.017971502980198287,
+      "symbols": [
+        "MOODENG/USDT:USDT"
+      ]
+    },
+    {
+      "name": "okxus",
+      "spread_avg_pct": "0.0077%",
+      "spread_avg": 0.007661249181804584,
+      "symbols": [
+        "MOODENG/USDT:USDT"
+      ]
+    },
+    {
+      "name": "okx",
+      "spread_avg_pct": "0.0073%",
+      "spread_avg": 0.007338834363000832,
+      "symbols": [
+        "MOODENG/USDT:USDT"
+      ]
+    },
+    {
+      "name": "blofin",
+      "spread_avg_pct": "-0.4180%",
+      "spread_avg": -0.41803587484561316,
+      "symbols": [
+        "MOODENG/USDT:USDT"
+      ]
+    }
+  ],
+  [
+    {
+      "name": "htx",
+      "spread_avg_pct": "0.4839%",
+      "spread_avg": 0.4838750431382007,
+      "symbols": [
+        "IP/USDT:USDT"
+      ]
+    },
+    {
+      "name": "huobi",
+      "spread_avg_pct": "0.4837%",
+      "spread_avg": 0.48367494805765676,
+      "symbols": [
+        "IP/USDT:USDT"
+      ]
+    },
+    {
+      "name": "hashkey",
+      "spread_avg_pct": "0.1137%",
+      "spread_avg": 0.11365926413198012,
+      "symbols": [
+        "IP/USDT:USDT"
+      ]
+    },
+    {
+      "name": "gateio",
+      "spread_avg_pct": "0.0648%",
+      "spread_avg": 0.06476169087181356,
+      "symbols": [
+        "IP/USDT:USDT"
+      ]
+    },
+    {
+      "name": "gate",
+      "spread_avg_pct": "0.0647%",
+      "spread_avg": 0.06473328882499031,
+      "symbols": [
+        "IP/USDT:USDT"
+      ]
+    },
+    {
+      "name": "phemex",
+      "spread_avg_pct": "0.0599%",
+      "spread_avg": 0.05994278009265861,
+      "symbols": [
+        "IP/USDT:USDT"
+      ]
+    },
+    {
+      "name": "bitget",
+      "spread_avg_pct": "0.0394%",
+      "spread_avg": 0.039392205971458746,
+      "symbols": [
+        "IP/USDT:USDT"
+      ]
+    },
+    {
+      "name": "coincatch",
+      "spread_avg_pct": "0.0067%",
+      "spread_avg": 0.0067424033937453515,
+      "symbols": [
+        "IP/USDT:USDT"
+      ]
+    },
+    {
+      "name": "okx",
+      "spread_avg_pct": "0.0061%",
+      "spread_avg": 0.006111080916470821,
+      "symbols": [
+        "IP/USDT:USDT"
+      ]
+    },
+    {
+      "name": "okxus",
+      "spread_avg_pct": "0.0054%",
+      "spread_avg": 0.005420362111059313,
+      "symbols": [
+        "IP/USDT:USDT"
+      ]
+    },
+    {
+      "name": "blofin",
+      "spread_avg_pct": "-0.1318%",
+      "spread_avg": -0.13177166115252903,
+      "symbols": [
+        "IP/USDT:USDT"
+      ]
+    }
+  ],
+  [
+    {
+      "name": "whitebit",
+      "spread_avg_pct": "0.3561%",
+      "spread_avg": 0.3560569575375627,
+      "symbols": [
+        "IMX/USDT:USDT"
+      ]
+    },
+    {
+      "name": "htx",
+      "spread_avg_pct": "0.1330%",
+      "spread_avg": 0.13303270239663553,
+      "symbols": [
+        "IMX/USDT:USDT"
+      ]
+    },
+    {
+      "name": "huobi",
+      "spread_avg_pct": "0.1328%",
+      "spread_avg": 0.13282456250023358,
+      "symbols": [
+        "IMX/USDT:USDT"
+      ]
+    },
+    {
+      "name": "gateio",
+      "spread_avg_pct": "0.1035%",
+      "spread_avg": 0.1035334960929488,
+      "symbols": [
+        "IMX/USDT:USDT"
+      ]
+    },
+    {
+      "name": "gate",
+      "spread_avg_pct": "0.1024%",
+      "spread_avg": 0.10238983988716739,
+      "symbols": [
+        "IMX/USDT:USDT"
+      ]
+    },
+    {
+      "name": "coincatch",
+      "spread_avg_pct": "0.0899%",
+      "spread_avg": 0.08989395987806469,
+      "symbols": [
+        "IMX/USDT:USDT"
+      ]
+    },
+    {
+      "name": "bitget",
+      "spread_avg_pct": "0.0557%",
+      "spread_avg": 0.05573141292467163,
+      "symbols": [
+        "IMX/USDT:USDT"
+      ]
+    },
+    {
+      "name": "xt",
+      "spread_avg_pct": "0.0513%",
+      "spread_avg": 0.051345739886785396,
+      "symbols": [
+        "IMX/USDT:USDT"
+      ]
+    },
+    {
+      "name": "phemex",
+      "spread_avg_pct": "0.0469%",
+      "spread_avg": 0.04693675479306918,
+      "symbols": [
+        "IMX/USDT:USDT"
+      ]
+    },
+    {
+      "name": "okx",
+      "spread_avg_pct": "0.0254%",
+      "spread_avg": 0.025449562479904878,
+      "symbols": [
+        "IMX/USDT:USDT"
+      ]
+    },
+    {
+      "name": "okxus",
+      "spread_avg_pct": "0.0231%",
+      "spread_avg": 0.02311980687815466,
+      "symbols": [
+        "IMX/USDT:USDT"
+      ]
+    },
+    {
+      "name": "blofin",
+      "spread_avg_pct": "-0.3831%",
+      "spread_avg": -0.38307296342849945,
+      "symbols": [
+        "IMX/USDT:USDT"
+      ]
+    }
+  ],
+  [
+    {
+      "name": "ascendex",
+      "spread_avg_pct": "0.4540%",
+      "spread_avg": 0.4540084932558159,
+      "symbols": [
+        "GRASS/USDT:USDT"
+      ]
+    },
+    {
+      "name": "whitebit",
+      "spread_avg_pct": "0.3911%",
+      "spread_avg": 0.391083657643568,
+      "symbols": [
+        "GRASS/USDT:USDT"
+      ]
+    },
+    {
+      "name": "htx",
+      "spread_avg_pct": "0.2644%",
+      "spread_avg": 0.2644187501218024,
+      "symbols": [
+        "GRASS/USDT:USDT"
+      ]
+    },
+    {
+      "name": "huobi",
+      "spread_avg_pct": "0.2641%",
+      "spread_avg": 0.26409402714034624,
+      "symbols": [
+        "GRASS/USDT:USDT"
+      ]
+    },
+    {
+      "name": "coincatch",
+      "spread_avg_pct": "0.1702%",
+      "spread_avg": 0.1701670991702995,
+      "symbols": [
+        "GRASS/USDT:USDT"
+      ]
+    },
+    {
+      "name": "gateio",
+      "spread_avg_pct": "0.1511%",
+      "spread_avg": 0.15112074869645134,
+      "symbols": [
+        "GRASS/USDT:USDT"
+      ]
+    },
+    {
+      "name": "gate",
+      "spread_avg_pct": "0.1511%",
+      "spread_avg": 0.15111341874387638,
+      "symbols": [
+        "GRASS/USDT:USDT"
+      ]
+    },
+    {
+      "name": "phemex",
+      "spread_avg_pct": "0.0778%",
+      "spread_avg": 0.07775627758179957,
+      "symbols": [
+        "GRASS/USDT:USDT"
+      ]
+    },
+    {
+      "name": "bitget",
+      "spread_avg_pct": "0.0423%",
+      "spread_avg": 0.04234300502926677,
+      "symbols": [
+        "GRASS/USDT:USDT"
+      ]
+    },
+    {
+      "name": "okx",
+      "spread_avg_pct": "0.0201%",
+      "spread_avg": 0.020076113693461416,
+      "symbols": [
+        "GRASS/USDT:USDT"
+      ]
+    },
+    {
+      "name": "mexc",
+      "spread_avg_pct": "0.0130%",
+      "spread_avg": 0.012956055282888915,
+      "symbols": [
+        "GRASS/USDT:USDT"
+      ]
+    },
+    {
+      "name": "blofin",
+      "spread_avg_pct": "-0.6458%",
+      "spread_avg": -0.6457748128298914,
+      "symbols": [
+        "GRASS/USDT:USDT"
+      ]
+    }
+  ],
+  [
+    {
+      "name": "whitebit",
+      "spread_avg_pct": "0.9426%",
+      "spread_avg": 0.9426129356896751,
+      "symbols": [
+        "BERA/USDT:USDT"
+      ]
+    },
+    {
+      "name": "htx",
+      "spread_avg_pct": "0.1476%",
+      "spread_avg": 0.14762189577105295,
+      "symbols": [
+        "BERA/USDT:USDT"
+      ]
+    },
+    {
+      "name": "huobi",
+      "spread_avg_pct": "0.1472%",
+      "spread_avg": 0.14723402730816826,
+      "symbols": [
+        "BERA/USDT:USDT"
+      ]
+    },
+    {
+      "name": "hashkey",
+      "spread_avg_pct": "0.1357%",
+      "spread_avg": 0.1356661228029315,
+      "symbols": [
+        "BERA/USDT:USDT"
+      ]
+    },
+    {
+      "name": "gateio",
+      "spread_avg_pct": "0.0961%",
+      "spread_avg": 0.0960841777276721,
+      "symbols": [
+        "BERA/USDT:USDT"
+      ]
+    },
+    {
+      "name": "gate",
+      "spread_avg_pct": "0.0960%",
+      "spread_avg": 0.09600794649745738,
+      "symbols": [
+        "BERA/USDT:USDT"
+      ]
+    },
+    {
+      "name": "phemex",
+      "spread_avg_pct": "0.0788%",
+      "spread_avg": 0.07881504871544225,
+      "symbols": [
+        "BERA/USDT:USDT"
+      ]
+    },
+    {
+      "name": "apex",
+      "spread_avg_pct": "0.0701%",
+      "spread_avg": 0.07005936153184052,
+      "symbols": [
+        "BERA/USDT:USDT"
+      ]
+    },
+    {
+      "name": "bitget",
+      "spread_avg_pct": "0.0555%",
+      "spread_avg": 0.055508035944406675,
+      "symbols": [
+        "BERA/USDT:USDT"
+      ]
+    },
+    {
+      "name": "okx",
+      "spread_avg_pct": "0.0528%",
+      "spread_avg": 0.05283585405770942,
+      "symbols": [
+        "BERA/USDT:USDT"
+      ]
+    },
+    {
+      "name": "xt",
+      "spread_avg_pct": "0.0527%",
+      "spread_avg": 0.0527427362162779,
+      "symbols": [
+        "BERA/USDT:USDT"
+      ]
+    },
+    {
+      "name": "okxus",
+      "spread_avg_pct": "0.0522%",
+      "spread_avg": 0.05221265169255797,
+      "symbols": [
+        "BERA/USDT:USDT"
+      ]
+    },
+    {
+      "name": "blofin",
+      "spread_avg_pct": "-0.3039%",
+      "spread_avg": -0.3039000939336858,
+      "symbols": [
+        "BERA/USDT:USDT"
+      ]
+    }
+  ],
+  [
+    {
+      "name": "whitebit",
+      "spread_avg_pct": "0.9426%",
+      "spread_avg": 0.9426129356896751,
+      "symbols": [
+        "BERA/USDT:USDT"
+      ]
+    },
+    {
+      "name": "htx",
+      "spread_avg_pct": "0.1476%",
+      "spread_avg": 0.14762189577105295,
+      "symbols": [
+        "BERA/USDT:USDT"
+      ]
+    },
+    {
+      "name": "huobi",
+      "spread_avg_pct": "0.1472%",
+      "spread_avg": 0.14723402730816826,
+      "symbols": [
+        "BERA/USDT:USDT"
+      ]
+    },
+    {
+      "name": "hashkey",
+      "spread_avg_pct": "0.1357%",
+      "spread_avg": 0.1356661228029315,
+      "symbols": [
+        "BERA/USDT:USDT"
+      ]
+    },
+    {
+      "name": "gateio",
+      "spread_avg_pct": "0.0961%",
+      "spread_avg": 0.0960841777276721,
+      "symbols": [
+        "BERA/USDT:USDT"
+      ]
+    },
+    {
+      "name": "gate",
+      "spread_avg_pct": "0.0960%",
+      "spread_avg": 0.09600794649745738,
+      "symbols": [
+        "BERA/USDT:USDT"
+      ]
+    },
+    {
+      "name": "phemex",
+      "spread_avg_pct": "0.0788%",
+      "spread_avg": 0.07881504871544225,
+      "symbols": [
+        "BERA/USDT:USDT"
+      ]
+    },
+    {
+      "name": "apex",
+      "spread_avg_pct": "0.0701%",
+      "spread_avg": 0.07005936153184052,
+      "symbols": [
+        "BERA/USDT:USDT"
+      ]
+    },
+    {
+      "name": "bitget",
+      "spread_avg_pct": "0.0555%",
+      "spread_avg": 0.055508035944406675,
+      "symbols": [
+        "BERA/USDT:USDT"
+      ]
+    },
+    {
+      "name": "okx",
+      "spread_avg_pct": "0.0528%",
+      "spread_avg": 0.05283585405770942,
+      "symbols": [
+        "BERA/USDT:USDT"
+      ]
+    },
+    {
+      "name": "xt",
+      "spread_avg_pct": "0.0527%",
+      "spread_avg": 0.0527427362162779,
+      "symbols": [
+        "BERA/USDT:USDT"
+      ]
+    },
+    {
+      "name": "okxus",
+      "spread_avg_pct": "0.0522%",
+      "spread_avg": 0.05221265169255797,
+      "symbols": [
+        "BERA/USDT:USDT"
+      ]
+    },
+    {
+      "name": "blofin",
+      "spread_avg_pct": "-0.3039%",
+      "spread_avg": -0.3039000939336858,
+      "symbols": [
+        "BERA/USDT:USDT"
+      ]
+    }
+  ],
+  [
+    {
+      "name": "whitebit",
+      "spread_avg_pct": "0.2413%",
+      "spread_avg": 0.24132163886488556,
+      "symbols": [
+        "BERA/USDT:USDT"
+      ]
+    },
+    {
+      "name": "huobi",
+      "spread_avg_pct": "0.1899%",
+      "spread_avg": 0.18992843108781485,
+      "symbols": [
+        "BERA/USDT:USDT"
+      ]
+    },
+    {
+      "name": "htx",
+      "spread_avg_pct": "0.1897%",
+      "spread_avg": 0.18968702441299992,
+      "symbols": [
+        "BERA/USDT:USDT"
+      ]
+    },
+    {
+      "name": "hashkey",
+      "spread_avg_pct": "0.1424%",
+      "spread_avg": 0.14236883176332818,
+      "symbols": [
+        "BERA/USDT:USDT"
+      ]
+    },
+    {
+      "name": "gate",
+      "spread_avg_pct": "0.0769%",
+      "spread_avg": 0.07692146545680714,
+      "symbols": [
+        "BERA/USDT:USDT"
+      ]
+    },
+    {
+      "name": "gateio",
+      "spread_avg_pct": "0.0769%",
+      "spread_avg": 0.07692146545680714,
+      "symbols": [
+        "BERA/USDT:USDT"
+      ]
+    },
+    {
+      "name": "phemex",
+      "spread_avg_pct": "0.0721%",
+      "spread_avg": 0.07206712788483866,
+      "symbols": [
+        "BERA/USDT:USDT"
+      ]
+    },
+    {
+      "name": "apex",
+      "spread_avg_pct": "0.0657%",
+      "spread_avg": 0.06571130628054353,
+      "symbols": [
+        "BERA/USDT:USDT"
+      ]
+    },
+    {
+      "name": "okx",
+      "spread_avg_pct": "0.0519%",
+      "spread_avg": 0.051857768898612336,
+      "symbols": [
+        "BERA/USDT:USDT"
+      ]
+    }
+  ],
+  [
+    {
+      "name": "huobi",
+      "spread_avg_pct": "0.5940%",
+      "spread_avg": 0.5939599117614347,
+      "symbols": [
+        "BABY/USDT:USDT"
+      ]
+    },
+    {
+      "name": "htx",
+      "spread_avg_pct": "0.5923%",
+      "spread_avg": 0.5922922078121472,
+      "symbols": [
+        "BABY/USDT:USDT"
+      ]
+    },
+    {
+      "name": "whitebit",
+      "spread_avg_pct": "0.4689%",
+      "spread_avg": 0.4689108712307427,
+      "symbols": [
+        "BABY/USDT:USDT"
+      ]
+    },
+    {
+      "name": "apex",
+      "spread_avg_pct": "0.1531%",
+      "spread_avg": 0.15307654419768893,
+      "symbols": [
+        "BABY/USDT:USDT"
+      ]
+    },
+    {
+      "name": "phemex",
+      "spread_avg_pct": "0.1423%",
+      "spread_avg": 0.14233735875386566,
+      "symbols": [
+        "BABY/USDT:USDT"
+      ]
+    },
+    {
+      "name": "gate",
+      "spread_avg_pct": "0.1254%",
+      "spread_avg": 0.12541360177737507,
+      "symbols": [
+        "BABY/USDT:USDT"
+      ]
+    },
+    {
+      "name": "gateio",
+      "spread_avg_pct": "0.1254%",
+      "spread_avg": 0.12537687899404498,
+      "symbols": [
+        "BABY/USDT:USDT"
+      ]
+    },
+    {
+      "name": "kucoinfutures",
+      "spread_avg_pct": "0.0706%",
+      "spread_avg": 0.07060900264783472,
+      "symbols": [
+        "BABY/USDT:USDT"
+      ]
+    },
+    {
+      "name": "coincatch",
+      "spread_avg_pct": "0.0570%",
+      "spread_avg": 0.05702386401882973,
+      "symbols": [
+        "BABY/USDT:USDT"
+      ]
+    },
+    {
+      "name": "bitget",
+      "spread_avg_pct": "0.0454%",
+      "spread_avg": 0.04543086779503189,
+      "symbols": [
+        "BABY/USDT:USDT"
+      ]
+    },
+    {
+      "name": "okx",
+      "spread_avg_pct": "0.0252%",
+      "spread_avg": 0.025202936463318653,
+      "symbols": [
+        "BABY/USDT:USDT"
+      ]
+    },
+    {
+      "name": "okxus",
+      "spread_avg_pct": "0.0251%",
+      "spread_avg": 0.025133518758884168,
+      "symbols": [
+        "BABY/USDT:USDT"
+      ]
+    },
+    {
+      "name": "blofin",
+      "spread_avg_pct": "-0.7960%",
+      "spread_avg": -0.7959652475768555,
+      "symbols": [
+        "BABY/USDT:USDT"
+      ]
+    }
+  ],
+  [
+    {
+      "name": "apex",
+      "spread_avg_pct": "0.8533%",
+      "spread_avg": 0.8532858363764818,
+      "symbols": [
+        "AI16Z/USDT:USDT"
+      ]
+    },
+    {
+      "name": "hashkey",
+      "spread_avg_pct": "0.4271%",
+      "spread_avg": 0.42712534167613053,
+      "symbols": [
+        "AI16Z/USDT:USDT"
+      ]
+    },
+    {
+      "name": "coincatch",
+      "spread_avg_pct": "0.2135%",
+      "spread_avg": 0.21351521468451057,
+      "symbols": [
+        "AI16Z/USDT:USDT"
+      ]
+    },
+    {
+      "name": "ascendex",
+      "spread_avg_pct": "0.2129%",
+      "spread_avg": 0.2129169623846431,
+      "symbols": [
+        "AI16Z/USDT:USDT"
+      ]
+    },
+    {
+      "name": "htx",
+      "spread_avg_pct": "0.1053%",
+      "spread_avg": 0.10525271717060752,
+      "symbols": [
+        "AI16Z/USDT:USDT"
+      ]
+    },
+    {
+      "name": "huobi",
+      "spread_avg_pct": "0.1050%",
+      "spread_avg": 0.10503850934111943,
+      "symbols": [
+        "AI16Z/USDT:USDT"
+      ]
+    },
+    {
+      "name": "phemex",
+      "spread_avg_pct": "0.0866%",
+      "spread_avg": 0.08664462046489288,
+      "symbols": [
+        "AI16Z/USDT:USDT"
+      ]
+    },
+    {
+      "name": "gate",
+      "spread_avg_pct": "0.0850%",
+      "spread_avg": 0.08498321561823456,
+      "symbols": [
+        "AI16Z/USDT:USDT"
+      ]
+    },
+    {
+      "name": "gateio",
+      "spread_avg_pct": "0.0844%",
+      "spread_avg": 0.08444137202807692,
+      "symbols": [
+        "AI16Z/USDT:USDT"
+      ]
+    },
+    {
+      "name": "okxus",
+      "spread_avg_pct": "0.0758%",
+      "spread_avg": 0.0758041306896146,
+      "symbols": [
+        "AI16Z/USDT:USDT"
+      ]
+    },
+    {
+      "name": "bitget",
+      "spread_avg_pct": "0.0732%",
+      "spread_avg": 0.073150173597081,
+      "symbols": [
+        "AI16Z/USDT:USDT"
+      ]
+    },
+    {
+      "name": "mexc",
+      "spread_avg_pct": "0.0726%",
+      "spread_avg": 0.07258984108487955,
+      "symbols": [
+        "AI16Z/USDT:USDT"
+      ]
+    },
+    {
+      "name": "xt",
+      "spread_avg_pct": "0.0712%",
+      "spread_avg": 0.07118803178665073,
+      "symbols": [
+        "AI16Z/USDT:USDT"
+      ]
+    },
+    {
+      "name": "okx",
+      "spread_avg_pct": "0.0712%",
+      "spread_avg": 0.07115837769710351,
+      "symbols": [
+        "AI16Z/USDT:USDT"
+      ]
+    },
+    {
+      "name": "blofin",
+      "spread_avg_pct": "-0.4091%",
+      "spread_avg": -0.40914047693281164,
+      "symbols": [
+        "AI16Z/USDT:USDT"
+      ]
+    }
+  ],
+  [
+    {
+      "name": "ascendex",
+      "spread_avg_pct": "2.1134%",
+      "spread_avg": 2.113352545629254,
+      "symbols": [
+        "ACT/USDT:USDT"
+      ]
+    },
+    {
+      "name": "huobi",
+      "spread_avg_pct": "0.9039%",
+      "spread_avg": 0.9039054482241509,
+      "symbols": [
+        "ACT/USDT:USDT"
+      ]
+    },
+    {
+      "name": "htx",
+      "spread_avg_pct": "0.9039%",
+      "spread_avg": 0.9038910551359359,
+      "symbols": [
+        "ACT/USDT:USDT"
+      ]
+    },
+    {
+      "name": "apex",
+      "spread_avg_pct": "0.2990%",
+      "spread_avg": 0.29904751353797715,
+      "symbols": [
+        "ACT/USDT:USDT"
+      ]
+    },
+    {
+      "name": "whitebit",
+      "spread_avg_pct": "0.2340%",
+      "spread_avg": 0.2339935208455976,
+      "symbols": [
+        "ACT/USDT:USDT"
+      ]
+    },
+    {
+      "name": "coincatch",
+      "spread_avg_pct": "0.1206%",
+      "spread_avg": 0.12059770789550835,
+      "symbols": [
+        "ACT/USDT:USDT"
+      ]
+    },
+    {
+      "name": "gateio",
+      "spread_avg_pct": "0.0997%",
+      "spread_avg": 0.09973771144252652,
+      "symbols": [
+        "ACT/USDT:USDT"
+      ]
+    },
+    {
+      "name": "gate",
+      "spread_avg_pct": "0.0997%",
+      "spread_avg": 0.09972536867703129,
+      "symbols": [
+        "ACT/USDT:USDT"
+      ]
+    },
+    {
+      "name": "phemex",
+      "spread_avg_pct": "0.0587%",
+      "spread_avg": 0.058743017993630145,
+      "symbols": [
+        "ACT/USDT:USDT"
+      ]
+    },
+    {
+      "name": "okx",
+      "spread_avg_pct": "0.0242%",
+      "spread_avg": 0.02418525699890409,
+      "symbols": [
+        "ACT/USDT:USDT"
+      ]
+    }
+  ]
+]

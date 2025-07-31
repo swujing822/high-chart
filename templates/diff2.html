@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>现货 vs 季度合约价格对比 + 基差（百分比）</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    #controls {
+      margin: 10px 0;
+    }
+    button, input, select {
+      padding: 6px 12px;
+      font-size: 16px;
+      margin-right: 10px;
+    }
+    input, select {
+      width: 160px;
+    }
+  </style>
+</head>
+<body>
+  <h2>现货 vs 季度合约价格（1分钟） + 基差百分比</h2>
+
+  <div id="controls">
+    <label>现货:</label>
+    <input type="text" id="spotSymbolInput" value="BTCUSDT" />
+
+    <label>季度合约:</label>
+    <select id="futuresSymbolSelect"></select>
+
+    <label>数量:</label>
+    <input type="number" id="limitInput" min="1" max="1000" value="100" />
+    <button id="refreshBtn">刷新</button>
+    <button id="prevBtn">⬅️ 后退</button>
+    <button id="nextBtn">➡️ 前进</button>
+  </div>
+
+  <canvas id="priceChart" width="1000" height="450"></canvas>
+
+  <script>
+    let endTime = undefined;
+    let limit = 100;
+    let chart = null;
+
+    async function fetchKlines(url, endTime, limit) {
+      let fullUrl = url + `&limit=${limit}`;
+      if (endTime) fullUrl += `&endTime=${endTime}`;
+      const res = await fetch(fullUrl);
+      const data = await res.json();
+      return Array.isArray(data)
+        ? data.map(d => ({
+            time: new Date(d[0]),
+            close: parseFloat(d[4]),
+            rawTime: d[0]
+          }))
+        : [];
+    }
+
+    function alignData(spotData, futuresData) {
+      const futuresMap = new Map(futuresData.map(d => [d.rawTime, d.close]));
+      return spotData
+        .filter(d => futuresMap.has(d.rawTime))
+        .map(d => ({
+          time: d.time,
+          spot: d.close,
+          futures: futuresMap.get(d.rawTime),
+          basisPercent: ((futuresMap.get(d.rawTime) - d.close) / d.close) * 100
+        }));
+    }
+
+    function drawChart(data, spotSymbol, futuresSymbol) {
+      const labels = data.map(d => `${d.time.getHours()}:${d.time.getMinutes().toString().padStart(2, '0')}`);
+      const spotPrices = data.map(d => d.spot);
+      const futuresPrices = data.map(d => d.futures);
+      const basisPercents = data.map(d => d.basisPercent);
+
+      const ctx = document.getElementById('priceChart').getContext('2d');
+      if (chart) {
+        chart.data.labels = labels;
+        chart.data.datasets[0].data = spotPrices;
+        chart.data.datasets[1].data = futuresPrices;
+        chart.data.datasets[2].data = basisPercents;
+        chart.options.plugins.title.text = `${spotSymbol} vs ${futuresSymbol} 基差(%)`;
+        chart.update('none');
+      } else {
+        chart = new Chart(ctx, {
+          type: 'line',
+          data: {
+            labels,
+            datasets: [
+              { label: `现货 ${spotSymbol}`, data: spotPrices, borderColor: 'blue', yAxisID: 'y' },
+              { label: `季度合约 ${futuresSymbol}`, data: futuresPrices, borderColor: 'red', yAxisID: 'y' },
+              { label: '基差 (%)', data: basisPercents, borderColor: 'green', yAxisID: 'y1' }
+            ]
+          },
+          options: {
+            animation: false,
+            interaction: { mode: 'index', intersect: false },
+            plugins: { title: { display: true }, legend: { position: 'top' } },
+            scales: {
+              x: { title: { display: true, text: '时间' } },
+              y: { position: 'left', title: { display: true, text: '价格 (USDT)' } },
+              y1: {
+                position: 'right',
+                grid: { drawOnChartArea: false },
+                title: { display: true, text: '基差 (%)' },
+                ticks: { callback: val => val.toFixed(2) + '%' }
+              }
+            }
+          }
+        });
+      }
+    }
+
+    async function loadData() {
+      const spotSymbol = document.getElementById('spotSymbolInput').value.trim().toUpperCase();
+      const futuresSymbol = document.getElementById('futuresSymbolSelect').value;
+      limit = parseInt(document.getElementById('limitInput').value, 10);
+
+      const spotUrl = `https://api.binance.com/api/v3/klines?symbol=${spotSymbol}&interval=1m`;
+      const futuresUrl = `https://fapi.binance.com/fapi/v1/klines?symbol=${futuresSymbol}&interval=1m`;
+
+      const [spotData, futuresData] = await Promise.all([
+        fetchKlines(spotUrl, endTime, limit),
+        fetchKlines(futuresUrl, endTime, limit)
+      ]);
+
+      if (spotData.length === 0 || futuresData.length === 0) {
+        alert("没有更多数据，或合约symbol错误！");
+        return;
+      }
+
+      endTime = spotData[0].rawTime - 1;
+
+      const alignedData = alignData(spotData, futuresData);
+      drawChart(alignedData, spotSymbol, futuresSymbol);
+    }
+
+    async function loadQuarterlyContracts() {
+      const res = await fetch('https://fapi.binance.com/fapi/v1/exchangeInfo');
+      const data = await res.json();
+      const select = document.getElementById('futuresSymbolSelect');
+
+      const quarterly = data.symbols.filter(s =>
+        ['CURRENT_QUARTER', 'NEXT_QUARTER'].includes(s.contractType)
+      );
+
+      quarterly.forEach(s => {
+        const opt = document.createElement('option');
+        opt.value = s.symbol;
+        opt.text = `${s.symbol} (${s.contractType})`;
+        if (s.symbol.startsWith('BTCUSD')) opt.selected = true;
+        select.appendChild(opt);
+      });
+    }
+
+    document.getElementById('refreshBtn').onclick = () => {
+      endTime = undefined;
+      loadData();
+    };
+
+    document.getElementById('prevBtn').onclick = () => loadData();
+    document.getElementById('nextBtn').onclick = () => {
+      endTime = undefined;
+      loadData();
+    };
+
+    loadQuarterlyContracts().then(loadData);
+  </script>
+</body>
+</html>

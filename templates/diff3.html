@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>现货 vs 合约 + 基差对比</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        #controls {
+            margin: 10px 0;
+        }
+
+        label,
+        input,
+        button {
+            margin-right: 8px;
+            font-size: 14px;
+        }
+
+        canvas {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>现货 vs 合约（Perp/Quarter）价格对比 + 基差百分比</h2>
+
+    <div id="controls">
+        <label for="exchangeInput">交易所:</label>
+        <input id="exchangeInput" value="binance" />
+
+        <label for="symbolInput">交易对:</label>
+        <input id="symbolInput" value="BTC/USDT" />
+
+        <label for="limitInput">数量:</label>
+        <input type="number" id="limitInput" value="100" min="1" max="1000" />
+
+        <label><input type="checkbox" id="useContract" checked /> 合约</label>
+
+        <button id="refreshBtn">🔄 刷新</button>
+        <button id="prevBtn">⬅️ 后退</button>
+        <button id="nextBtn">➡️ 前进</button>
+    </div>
+
+    <canvas id="chart" width="1000" height="450"></canvas>
+
+    <script>
+        let endTime = undefined;
+        let chart = null;
+
+        async function fetchKlines(exchange, symbol, limit, endTime, useContract) {
+            const url = `/klines?exchange=${exchange}&symbol=${encodeURIComponent(symbol)}&limit=${limit}&contract=${useContract}`;
+            const finalUrl = endTime ? `${url}&since=${endTime}` : url;
+
+            const res = await fetch(finalUrl);
+            const data = await res.json();
+
+            return Array.isArray(data)
+                ? data.map(d => ({
+                    time: new Date(d.time),
+                    rawTime: d.time,
+                    close: d.close
+                }))
+                : [];
+        }
+
+
+        function alignData(spotData, contractData) {
+            const map = new Map(contractData.map(d => [d.rawTime, d.close]));
+            return spotData
+                .filter(d => map.has(d.rawTime))
+                .map(d => {
+                    const contractPrice = map.get(d.rawTime);
+                    return {
+                        time: d.time,
+                        spot: d.close,
+                        contract: contractPrice,
+                        basisPercent: ((contractPrice - d.close) / d.close) * 100
+                    };
+                });
+        }
+
+        function drawChart(data, symbol) {
+            const labels = data.map(d => {
+                const t = d.time;
+                return `${t.getHours()}:${String(t.getMinutes()).padStart(2, '0')}`;
+            });
+            const spot = data.map(d => d.spot);
+            const contract = data.map(d => d.contract);
+            const basis = data.map(d => d.basisPercent);
+
+            const ctx = document.getElementById("chart").getContext("2d");
+            if (chart) {
+                chart.data.labels = labels;
+                chart.data.datasets[0].data = spot;
+                chart.data.datasets[1].data = contract;
+                chart.data.datasets[2].data = basis;
+                chart.update("none");
+            } else {
+                chart = new Chart(ctx, {
+                    type: 'line',
+                    data: {
+                        labels,
+                        datasets: [
+                            {
+                                label: `现货价格 (${symbol})`,
+                                data: spot,
+                                borderColor: 'blue',
+                                yAxisID: 'y',
+                                tension: 0.3,
+                            },
+                            {
+                                label: `合约价格 (${symbol})`,
+                                data: contract,
+                                borderColor: 'red',
+                                yAxisID: 'y',
+                                tension: 0.3,
+                            },
+                            {
+                                label: '基差 (%)',
+                                data: basis,
+                                borderColor: 'green',
+                                yAxisID: 'y1',
+                                tension: 0.3,
+                            }
+                        ]
+                    },
+                    options: {
+                        animation: false,
+                        responsive: true,
+                        plugins: {
+                            title: {
+                                display: true,
+                                text: `${symbol} 现货 vs 合约 + 基差百分比`
+                            },
+                            legend: {
+                                position: 'top'
+                            }
+                        },
+                        scales: {
+                            x: { title: { display: true, text: '时间' } },
+                            y: {
+                                type: 'linear',
+                                position: 'left',
+                                title: { display: true, text: '价格 (USDT)' }
+                            },
+                            y1: {
+                                type: 'linear',
+                                position: 'right',
+                                title: { display: true, text: '基差 (%)' },
+                                grid: { drawOnChartArea: false },
+                                ticks: {
+                                    callback: v => v.toFixed(2) + '%'
+                                }
+                            }
+                        }
+                    }
+                });
+            }
+        }
+
+        async function loadData() {
+            const exchange = document.getElementById("exchangeInput").value.trim();
+            const symbol = document.getElementById("symbolInput").value.trim().toUpperCase();
+            const limit = parseInt(document.getElementById("limitInput").value) || 100;
+            const useContract = document.getElementById("useContract").checked;
+
+            const [spotData, contractData] = await Promise.all([
+                fetchKlines(exchange, symbol, limit, endTime, false),
+                fetchKlines(exchange, symbol, limit, endTime, useContract),
+            ]);
+
+            if (spotData.length === 0 || contractData.length === 0) {
+                alert("数据获取失败");
+                return;
+            }
+
+            // 平移一半时间窗口
+            endTime = spotData[0].rawTime - Math.floor(limit / 2) * 60 * 1000;
+
+            const aligned = alignData(spotData, contractData);
+            drawChart(aligned, symbol);
+        }
+
+        document.getElementById("refreshBtn").onclick = () => {
+            endTime = undefined;
+            loadData();
+        };
+        document.getElementById("prevBtn").onclick = () => {
+            loadData();
+        };
+        document.getElementById("nextBtn").onclick = () => {
+            endTime = undefined;
+            loadData();
+        };
+
+        loadData();  // 初次加载
+    </script>
+</body>
+
+</html>

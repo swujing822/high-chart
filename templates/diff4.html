@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>LBank 现货 vs 永续合约价格对比 + 基差（BNKR/USDT）</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    #controls {
+      margin: 10px 0;
+    }
+    button, input {
+      padding: 6px 12px;
+      font-size: 16px;
+      margin-right: 10px;
+    }
+    input {
+      width: 180px;
+    }
+  </style>
+</head>
+<body>
+  <h2>LBank 现货 vs 永续合约价格（1分钟） + 基差（百分比）</h2>
+
+  <div id="controls">
+    <label for="symbolInput">交易对（symbol）:</label>
+    <input type="text" id="symbolInput" value="bnkr_usdt" />
+    <label for="limitInput">单次获取K线数量:</label>
+    <input type="number" id="limitInput" min="1" max="1000" value="100" />
+    <button id="refreshBtn">刷新数据</button>
+  </div>
+
+  <canvas id="priceChart" width="1000" height="450"></canvas>
+
+  <script>
+    let chart = null;
+    let symbol = 'bnkr_usdt';
+
+    // 获取LBank现货1分钟K线
+    async function fetchSpotKlinesLBank(symbol, limit) {
+      const url = `https://api.lbkex.com/v2/kline.do?symbol=${symbol}&period=1min&size=${limit}`;
+      const res = await fetch(url);
+      const json = await res.json();
+      if (!json.data) throw new Error('无效返回数据（现货）');
+      return json.data.map(d => ({
+        time: new Date(d.id * 1000),
+        close: parseFloat(d.close),
+        rawTime: d.id * 1000
+      }));
+    }
+
+    // 获取LBank永续合约1分钟K线
+    async function fetchFuturesKlinesLBank(symbol, limit) {
+      // LBank永续合约接口，symbol全小写，interval=1min，size限制条数
+      const url = `https://contract.lbkex.net/api/v1/kline?symbol=${symbol}&interval=1min&size=${limit}`;
+      const res = await fetch(url);
+      const json = await res.json();
+      if (!json.data) throw new Error('无效返回数据（合约）');
+      return json.data.map(d => ({
+        time: new Date(d.id * 1000),
+        close: parseFloat(d.close),
+        rawTime: d.id * 1000
+      }));
+    }
+
+    // 对齐现货和合约数据，只保留时间点相同的
+    function alignData(spotData, futuresData) {
+      const futuresMap = new Map(futuresData.map(d => [d.rawTime, d.close]));
+      return spotData
+        .filter(d => futuresMap.has(d.rawTime))
+        .map(d => ({
+          time: d.time,
+          spot: d.close,
+          futures: futuresMap.get(d.rawTime),
+          basisPercent: ((futuresMap.get(d.rawTime) - d.close) / d.close) * 100
+        }));
+    }
+
+    // 绘制图表
+    function drawChart(alignedData) {
+      const labels = alignedData.map(d => {
+        const h = d.time.getHours();
+        const m = d.time.getMinutes().toString().padStart(2, '0');
+        return `${h}:${m}`;
+      });
+      const spotPrices = alignedData.map(d => d.spot);
+      const futuresPrices = alignedData.map(d => d.futures);
+      const basisPercents = alignedData.map(d => d.basisPercent);
+
+      const ctx = document.getElementById('priceChart').getContext('2d');
+      if (chart) {
+        chart.data.labels = labels;
+        chart.data.datasets[0].data = spotPrices;
+        chart.data.datasets[1].data = futuresPrices;
+        chart.data.datasets[2].data = basisPercents;
+        chart.update('none');
+      } else {
+        chart = new Chart(ctx, {
+          type: 'line',
+          data: {
+            labels,
+            datasets: [
+              {
+                label: `现货价格 (${symbol.toUpperCase()})`,
+                data: spotPrices,
+                borderColor: 'blue',
+                borderWidth: 2,
+                fill: false,
+                tension: 0.3,
+                yAxisID: 'y',
+              },
+              {
+                label: `永续合约价格 (${symbol.toUpperCase()} Perp)`,
+                data: futuresPrices,
+                borderColor: 'red',
+                borderWidth: 2,
+                fill: false,
+                tension: 0.3,
+                yAxisID: 'y',
+              },
+              {
+                label: '基差百分比 (%)',
+                data: basisPercents,
+                borderColor: 'green',
+                borderWidth: 2,
+                fill: false,
+                tension: 0.3,
+                yAxisID: 'y1',
+              },
+            ],
+          },
+          options: {
+            animation: false,
+            responsive: true,
+            interaction: {
+              mode: 'index',
+              intersect: false,
+            },
+            stacked: false,
+            plugins: {
+              title: {
+                display: true,
+                text: `${symbol.toUpperCase()} 现货 vs 永续合约 + 基差百分比`,
+              },
+              legend: {
+                position: 'top',
+              },
+            },
+            scales: {
+              x: {
+                display: true,
+                title: {
+                  display: true,
+                  text: '时间',
+                },
+              },
+              y: {
+                type: 'linear',
+                display: true,
+                position: 'left',
+                title: {
+                  display: true,
+                  text: '价格 (USDT)',
+                },
+              },
+              y1: {
+                type: 'linear',
+                display: true,
+                position: 'right',
+                grid: {
+                  drawOnChartArea: false,
+                },
+                title: {
+                  display: true,
+                  text: '基差百分比 (%)',
+                },
+                ticks: {
+                  callback: function(value) {
+                    return value.toFixed(2) + '%';
+                  }
+                }
+              },
+            },
+          },
+        });
+      }
+    }
+
+    async function loadData() {
+      symbol = document.getElementById('symbolInput').value.trim().toLowerCase();
+      const limit = parseInt(document.getElementById('limitInput').value, 10);
+      if (!symbol) {
+        alert('请输入交易对symbol');
+        return;
+      }
+      if (isNaN(limit) || limit < 1 || limit > 1000) {
+        alert('请输入 1 到 1000 之间的有效数字');
+        return;
+      }
+
+      try {
+        const [spotData, futuresData] = await Promise.all([
+          fetchSpotKlinesLBank(symbol, limit),
+          fetchFuturesKlinesLBank(symbol, limit),
+        ]);
+
+        if (spotData.length === 0 || futuresData.length === 0) {
+          alert("没有更多数据了，或者交易对不存在！");
+          return;
+        }
+
+        const alignedData = alignData(spotData, futuresData);
+        drawChart(alignedData);
+      } catch (error) {
+        alert('请求失败：' + error.message);
+        console.error(error);
+      }
+    }
+
+    document.getElementById('refreshBtn').addEventListener('click', loadData);
+
+    // 页面加载后自动获取数据
+    loadData();
+  </script>
+</body>
+</html>

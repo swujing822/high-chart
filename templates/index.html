@@ -18,10 +18,17 @@
   <script src="./static/table_init.js"></script> <!-- 引入外部js -->
   <script src="./static/chart_utils.js"></script> <!-- 引入外部js -->
 
-
+  <div id="uploadSuccess"
+    style="display:none; position:fixed; top:20px; right:20px; background:lightgreen; padding:10px; border-radius:5px;">
+    ✅ 数据添加成功！
+  </div>
   <div style="display: flex;align-items: flex-start;">
     <div>
       <select id="csvSelect"></select>
+      <span class="btn" onclick="next()">next</span>
+      <span class="btn" onclick="add()">添加</span>
+
+
       <input id="myInput" style="width: 50px;" />
 
       <span class="btn" onclick="update_data(0, -1)">减少</span>
@@ -55,7 +62,11 @@
 
     var gFilterSet = new Set();
     var gData = null;
+    var gFilteredData = null;
     var gExchanges = null;
+
+    var gDiffSeries = null;
+
 
     function getRatio(max_bid, min_ask) {
       var r = 100 * (max_bid - min_ask) / min_ask
@@ -70,6 +81,71 @@
       gMultiNum = this.value;  // 实时更新变量
       // console.log('gMultiNum 更新为:', gMultiNum);
     });
+
+    function add() {
+      const diffAvgs = []
+
+      gExchanges.forEach(ex => {
+        const filtered = gData.filter(d => d.exchange === ex);
+        const diffs = filtered.map(d => 100 * (d.ask1_price - d.bid1_price) / d.bid1_price);
+        const validDiffs = diffs.filter(v => Number.isFinite(v));
+        const avg = validDiffs.reduce((sum, val) => sum + val, 0) / validDiffs.length;
+
+
+        const symbolsSet = new Set(filtered.map(d => d.symbol));
+        const symbols = Array.from(symbolsSet);
+
+        console.log(`📊 ${ex} 平均价差: ${avg.toFixed(4)}%, 包含symbol数: ${symbols.length}`);
+
+        diffAvgs.push({
+          name: ex,
+          spread_avg_pct: `${avg.toFixed(4)}%`,
+          spread_avg: avg,
+          symbols: symbols  // 把 symbol 数组也存进去
+        });
+      });
+
+      // 🔽 按 avg 值降序排列
+      diffAvgs.sort((a, b) => b.spread_avg - a.spread_avg);
+
+      fetch('/upload_json', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(diffAvgs)  // 👈 转成 JSON 字符串
+      })
+        .then(response => response.json())
+        .then(result => {
+          console.log('✅ 后端响应:', result);
+          const msg = document.getElementById('uploadSuccess');
+          msg.style.display = 'block';
+
+          // 1 秒后隐藏
+          setTimeout(() => {
+            msg.style.display = 'none';
+          }, 1000);
+        })
+        .catch(error => {
+          console.error('❌ 发送失败:', error);
+        });
+
+    }
+
+    function next() {
+      const select = document.getElementById('csvSelect');
+      const currentIndex = select.selectedIndex;
+      const nextIndex = (currentIndex + 1) % select.options.length;
+      select.selectedIndex = nextIndex;
+
+      const selectedFile = select.value;
+      localStorage.setItem('lastSelectedFile', selectedFile);
+      loadData(selectedFile, 0, 30000);
+
+      Array.from(select.options).forEach(opt => {
+        opt.style.backgroundColor = (opt.value === selectedFile) ? 'lightgreen' : '';
+      });
+    }
 
     fetch('/files')
       .then(res => res.json())
@@ -159,11 +235,11 @@
     function updatePage() {
       console.log(gFilterSet)
 
-      const filteredData = gData.filter(d => !gFilterSet.has(d.exchange));
+      gFilteredData = gData.filter(d => !gFilterSet.has(d.exchange));
 
 
-      drawData(filteredData, gFileName)
-      initTabulatorTable("#example-table", filteredData);
+      gDiffSeries = drawData(gFilteredData, gFileName)
+      initTabulatorTable("#example-table", gFilteredData);
 
     }
 

@@ -1,0 +1,68 @@
+name: Auto Release csv_orderbooks (every 4 hours)
+
+on:
+  schedule:
+    - cron: '0 */2 * * *'  # 每 2 小时 UTC 执行一次
+  workflow_dispatch:
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 🕒 Record start time
+        id: record_start
+        run: echo "start_time=$(date -u +'%Y%m%d-%H%M%S')" >> $GITHUB_OUTPUT
+
+      - name: ⬇️ Clone swujing822/simple-ccxt
+        run: |
+          git clone https://github.com/swujing822/simple-ccxt.git source-repo
+
+      - name: 🐍 Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: 📦 Install Python dependencies
+        working-directory: source-repo
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt || echo "⚠️ requirements.txt 不存在，跳过"
+
+      - name: ▶️ Run watch_orderbooks.py
+        working-directory: source-repo/src
+        run: |
+          python watch_orderbooks.py
+
+      - name: 🧭 List files in source-repo/src
+        run: |
+          echo "📁 当前路径:"
+          pwd
+          echo "📄 文件列表:"
+          ls -al source-repo/src
+
+      - name: 🕓 Record end time
+        id: record_end
+        run: echo "end_time=$(date -u +'%Y%m%d-%H%M%S')" >> $GITHUB_OUTPUT
+
+      - name: 🏷️ Create release tag from start~end time
+        id: set_tag
+        run: |
+          TAG="auto-${{ steps.record_start.outputs.start_time }}_${{ steps.record_end.outputs.end_time }}"
+          echo "tag_name=$TAG" >> $GITHUB_OUTPUT
+
+      - name: 🚀 Upload to swujing822/target Release
+        uses: softprops/action-gh-release@v2
+        with:
+          repository: swujing822/target
+          tag_name: ${{ steps.set_tag.outputs.tag_name }}
+          name: Release ${{ steps.set_tag.outputs.tag_name }}
+          body: |
+            自动执行时间范围：  
+            开始：${{ steps.record_start.outputs.start_time }}  
+            结束：${{ steps.record_end.outputs.end_time }}
+          files: |
+            source-repo/src/csv_orderbooks_exchange_*.zip
+            source-repo/src/csv_orderbooks_symbol_*.zip
+        env:
+          GITHUB_TOKEN: ${{ secrets.TARGET_REPO_TOKEN }}

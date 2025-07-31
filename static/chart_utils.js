@@ -277,4 +277,6 @@ function drawData(data, fileName) {
         }
 
     });
+
+    return diffSeries;
 }
